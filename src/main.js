@@ -2,12 +2,13 @@
  * @Description: 业务逻辑核心文件
  * @Author: chengDong
  * @Date: 2019-12-04 17:23:44
- * @LastEditTime: 2019-12-04 19:04:31
- * @LastEditors: chengDong
+ * @LastEditTime: 2019-12-04 21:19:54
+ * @LastEditors: Please set LastEditors
  */
 
 const commander = require('commander');
 const {version} = require('./constsants')
+const path = require('path')
 // un-cli create xxx
 
 const mapAction ={
@@ -43,6 +44,9 @@ Reflect.ownKeys(mapAction).forEach((action) => {
     .action(() => {
         if(action === '*') { 
             console.log(mapAction[action].description)
+        } else {
+            // un-cli create xxx
+            require(path.resolve(__dirname,action))(...process.argv.slice(3))
         }
     })
 })
