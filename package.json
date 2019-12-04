@@ -1,0 +1,23 @@
+{
+  "name": "node-dev-template",
+  "version": "1.0.0",
+  "description": "a cli tool for node server development which include(ES6 template, commonjs template, typescript-template)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "un-cli": "./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chengdonglin/node-dev-template.git"
+  },
+  "keywords": [],
+  "author": "linchengdong <chengdong2518@163.com> (https://github.com/chengdonglin)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chengdonglin/node-dev-template/issues"
+  },
+  "homepage": "https://github.com/chengdonglin/node-dev-template#readme"
+}
