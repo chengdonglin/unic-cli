@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint --init",
-    "lint": "eslint --fix"
+    "lint": "eslint ./src --fix"
   },
   "bin": {
     "un-cli": "./bin/www"
@@ -26,5 +26,8 @@
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2"
+  },
+  "dependencies": {
+    "commander": "^4.0.1"
   }
 }
