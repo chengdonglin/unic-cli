@@ -5,8 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "eslint": "eslint --init",
-        "lint": "eslint ./src --fix"
+        "eslint": "eslint --init && init the eslint file complete",
+        "lint": "eslint ./src --fix . && echo 'lint complete"
     },
     "bin": {
         "un-cli": "./bin/www"
