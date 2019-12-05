@@ -8,5 +8,5 @@
  */
 
 module.exports = (projectName) => {
-    console.log(projectName)
-}
+  console.log(projectName);
+};

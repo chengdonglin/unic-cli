@@ -5,8 +5,8 @@
  * @LastEditTime: 2019-12-04 18:01:15
  * @LastEditors: chengDong
  */
-const {version} = require('../package.json')
+const { version } = require('../package.json');
 
 module.exports = {
-    version
-}
+  version,
+};
