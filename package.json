@@ -1,41 +1,43 @@
 {
-  "name": "node-dev-template",
-  "version": "1.0.0",
-  "description": "a cli tool for node server development which include(ES6 template, commonjs template, typescript-template)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint --init",
-    "lint": "eslint ./src --fix"
-  },
-  "bin": {
-    "un-cli": "./bin/www"
-  },
-  "husky":{
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push":"npm run lint"
+    "name": "node-dev-template",
+    "version": "1.0.0",
+    "description": "a cli tool for node server development which include(ES6 template, commonjs template, typescript-template)",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "eslint": "eslint --init",
+        "lint": "eslint ./src --fix"
+    },
+    "bin": {
+        "un-cli": "./bin/www"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged",
+            "pre-push": "npm run lint"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chengdonglin/node-dev-template.git"
+    },
+    "keywords": [],
+    "author": "linchengdong <chengdong2518@163.com> (https://github.com/chengdonglin)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/chengdonglin/node-dev-template/issues"
+    },
+    "homepage": "https://github.com/chengdonglin/node-dev-template#readme",
+    "devDependencies": {
+        "eslint": "^6.7.2",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-plugin-import": "^2.18.2",
+        "husky": "^3.1.0",
+        "prettier": "^1.19.1",
+        "pretty-quick": "^2.0.1"
+    },
+    "dependencies": {
+        "axios": "^0.19.0",
+        "commander": "^4.0.1"
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chengdonglin/node-dev-template.git"
-  },
-  "keywords": [],
-  "author": "linchengdong <chengdong2518@163.com> (https://github.com/chengdonglin)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chengdonglin/node-dev-template/issues"
-  },
-  "homepage": "https://github.com/chengdonglin/node-dev-template#readme",
-  "devDependencies": {
-    "eslint": "^6.7.2",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "husky": "^3.1.0"
-  },
-  "dependencies": {
-    "axios": "^0.19.0",
-    "commander": "^4.0.1"
-  }
 }
