@@ -1,7 +1,7 @@
 /*
  * @Author: chengDong
  * @Date: 2019-12-04 21:13:34
- * @LastEditTime: 2019-12-05 09:54:24
+ * @LastEditTime: 2019-12-05 09:57:27
  * @LastEditors: chengDong
  * @Description: create project code
  * @FilePath: \node-dev-template\src\create.js
@@ -12,19 +12,19 @@
  * https://api.github.com/users/chengdonglin/repos
  */
 
-const axios = require('axios')
+const axios = require('axios');
 
 const fetchRepoList = async () => {
     const { data } = await axios.default.get(
         'https://api.github.com/users/chengdonglin/repos'
-    )
-    return data
-}
+    );
+    return data;
+};
 
 module.exports = async projectName => {
-    console.log(projectName)
-    let repos = await fetchRepoList()
-    repos = repos.map(item => item.name)
-    console.log(repos)
-    console.log('xxx')
-}
+    console.log(projectName);
+    let repos = await fetchRepoList();
+    repos = repos.map(item => item.name);
+    console.log(repos);
+    console.log('xxx');
+};
