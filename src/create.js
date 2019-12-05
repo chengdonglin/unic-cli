@@ -15,16 +15,16 @@
 const axios = require('axios');
 
 const fetchRepoList = async () => {
-    const { data } = await axios.default.get(
-        'https://api.github.com/users/chengdonglin/repos'
-    );
-    return data;
+  const { data } = await axios.default.get(
+    'https://api.github.com/users/chengdonglin/repos'
+  );
+  return data;
 };
 
-module.exports = async projectName => {
-    console.log(projectName);
-    let repos = await fetchRepoList();
-    repos = repos.map(item => item.name);
-    console.log(repos);
-    console.log('xxx');
+module.exports = async (projectName) => {
+  console.log(projectName);
+  let repos = await fetchRepoList();
+  repos = repos.map((item) => item.name);
+  console.log(repos);
+  console.log('xxx');
 };

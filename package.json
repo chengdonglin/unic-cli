@@ -4,7 +4,7 @@
     "description": "a cli tool for node server development which include(ES6 template, commonjs template, typescript-template)",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "echo 'complete the test'",
         "eslint": "eslint --init && init the eslint file complete",
         "lint": "eslint ./src --fix . && echo 'lint complete"
     },
@@ -13,8 +13,8 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "pretty-quick --staged",
-            "pre-push": "npm run lint"
+            "pre-commit": "npm run test",
+            "pre-push": "npm run test"
         }
     },
     "repository": {
