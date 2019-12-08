@@ -17,12 +17,12 @@ const ora = require('ora');
 const Inquirer = require('inquirer');
 const { promisify } = require('util');
 let downloadGitRepo = require('download-git-repo');
-let ncp =require('ncp')
+let ncp = require('ncp');
+const path = require('path');
 const { downloadDir } = require('./constsants');
-const path = require('path')
 
 downloadGitRepo = promisify(downloadGitRepo); // 异步api转promise
-ncp = promisify(ncp)
+ncp = promisify(ncp);
 
 /**
  * 获取远程模板
@@ -86,8 +86,8 @@ module.exports = async (projectName) => {
     choices: branches,
     message: 'please choise a branch',
   });
-  const result = await waitingloading(download,'downloading tempate')(repo, branch);
+  const result = await waitingloading(download, 'downloading tempate')(repo, branch);
   // 简单模板, 直接拷贝当前到当前可执行目录
-  await ncp(result,path.resolve(projectName))
+  await ncp(result, path.resolve(projectName));
   // 复杂模板, 渲染在拷贝
 };
