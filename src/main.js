@@ -1,10 +1,12 @@
 /*
- * @Description: 业务逻辑核心文件
- * @Author: chengDong
- * @Date: 2019-12-04 17:23:44
- * @LastEditTime: 2019-12-04 21:19:54
- * @LastEditors: Please set LastEditors
+ * @Description: 项目核心入口
+ * @Version: 2.0
+ * @Autor: chengDong
+ * @Date: 2019-12-08 19:42:35
+ * @LastEditors: chengDong
+ * @LastEditTime: 2019-12-13 21:33:06
  */
+
 
 const commander = require('commander');
 const path = require('path');
