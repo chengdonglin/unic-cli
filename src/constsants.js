@@ -11,10 +11,10 @@ const { version } = require('../package.json');
 
 const downloadDir = `${process.env[process.platform === 'darwin' ? 'HOME' : 'USERPROFILE']}/.template`;
 
-const targetAction = ['cancle', 'override']
+const targetAction = ['cancle', 'override'];
 
 module.exports = {
   version,
   downloadDir,
-  targetAction
+  targetAction,
 };
