@@ -9,4 +9,4 @@
 # node-dev-template
 a cli tool for node server development which include(ES6 template, commonjs template, typescript-template)
 
-快速搭建node.js项目的一个脚手架工具
+快速搭建node.js服务端项目的一个脚手架工具
