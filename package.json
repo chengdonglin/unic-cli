@@ -1,6 +1,6 @@
 {
     "name": "node-dev-template",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "a cli tool for node server development which include(ES6 template, commonjs template, typescript-template)",
     "main": "index.js",
     "scripts": {
