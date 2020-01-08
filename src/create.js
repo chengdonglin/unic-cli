@@ -3,8 +3,8 @@
  * @Version: 2.0
  * @Autor: chengDong
  * @Date: 2019-12-08 19:42:35
- * @LastEditors: chengDong
- * @LastEditTime: 2019-12-14 11:22:34
+ * @LastEditors  : chengDong
+ * @LastEditTime : 2020-01-08 10:00:51
  */
 
 /**
@@ -18,7 +18,8 @@ const chalk = require('chalk');
 let ncp = require('ncp');
 const path = require('path');
 const fs = require('fs');
-const { targetAction } = require('./constsants');
+const shell = require('shelljs')
+const { targetAction, installOrNot } = require('./constsants');
 const { fetchRepoBranches, fetchRepoList, download, waitingloading} = require('./tools')
 // 遍历文件夹, 判断是否需要渲染
 const Metalsmith = require('metalsmith')
@@ -103,6 +104,22 @@ module.exports = async (projectName) => {
       }
     })
    })
-   console.log(chalk.bgGreen('clone the template success, happy code with it'))
-  }  
+   console.log(chalk.bgGreen('clone the template success'))
+  }
+  const { choose } = await Inquirer.prompt({
+    name:'choose',
+    type:'list',
+    choices: installOrNot,
+    message: chalk.yellowBright('Do you want to install the dependencies ?')
+  })
+  if (choose == 'true') {
+    console.log(chalk.green('waiting install ....'))
+    shell.cd(`${projectName}`)
+    if(shell.exec('npm install').code !=0) {
+      console.log(chalk.red('install the dependencies error'))
+    } else {
+      console.log('run npm install success')
+    }
+  }
+  console.log(chalk.bgGreen('if this project can help you, please git me a start, Thanks!!!'))
 };
