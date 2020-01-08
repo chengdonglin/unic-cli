@@ -13,11 +13,11 @@ const downloadDir = `${process.env[process.platform === 'darwin' ? 'HOME' : 'USE
 
 const targetAction = ['cancle', 'override'];
 
-const installOrNot = ['true', 'false']
+const installOrNot = ['true', 'false'];
 
 module.exports = {
   version,
   downloadDir,
   targetAction,
-  installOrNot
+  installOrNot,
 };
