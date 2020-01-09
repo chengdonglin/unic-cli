@@ -1,12 +1,12 @@
 <!--
  * @Author: chengdong
  * @Date: 2019-12-04 21:03:47
- * @LastEditTime: 2019-12-08 21:11:41
- * @LastEditors: chengdong
+ * @LastEditTime : 2020-01-09 14:03:18
+ * @LastEditors  : chengDong
  * @Description: readme
  * @FilePath: \node-dev-template\README.md
  -->
 # node-dev-template
-a cli tool for node server development which include(ES6 template, commonjs template, typescript-template)
 
-快速搭建node.js服务端项目的一个脚手架工具
+ - Use the un-cli tool create the node web server development environment 
+ - and also you can learn how to build you personal cli tool by this project
