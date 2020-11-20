@@ -6,7 +6,7 @@
  * @Description: readme
  * @FilePath: \node-dev-template\README.md
  -->
-# node-dev-template
+# unic-cli
 
  - Use the un-cli tool create the node web server development environment 
  - At the same time, you can also learn how to build your own cli tool through this project.
