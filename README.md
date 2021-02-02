@@ -8,11 +8,10 @@
  -->
 # unic-cli
 
- - Use the un-cli tool create the node web server development environment 
- - At the same time, you can also learn how to build your own cli tool through this project.
+ 开发node.js 项目工程, 项目基本工程配置比较繁琐, 写一个 cli 插件用于快速搭建 node.js 开发环境
 
 
-## quick start
+## 快速开始
 
  - npm i node-dev-template -g
  - un-cli c projectName
